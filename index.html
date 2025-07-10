@@ -38,6 +38,11 @@
   </section>
 
   <section>
+    <h2>Repositorios de GitHub</h2>
+    <div id="github-projects"></div>
+  </section>
+
+  <section>
     <h2>Contacto</h2>
     <p>
       📧 jesus.gravalos@outlook.com <br>
@@ -49,5 +54,27 @@
   <footer>
     <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
   </footer>
+  <script>
+  const username = "jgravalo"; // ← reemplaza con tu nombre de usuario
+
+  fetch(`https://api.github.com/users/${username}/repos`)
+    .then(response => response.json())
+    .then(repos => {
+      const container = document.getElementById('github-projects');
+      repos.forEach(repo => {
+        const card = document.createElement('div');
+        card.classList.add('project-card');
+        card.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repo.description || "Sin descripción"}</p>
+          <a href="${repo.html_url}" target="_blank">Ver en GitHub</a>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error("Error al cargar los repositorios:", error);
+    });
+  </script>
 </body>
 </html>
