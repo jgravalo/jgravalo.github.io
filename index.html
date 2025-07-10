@@ -1,1 +1,113 @@
-<h1>MY PORTFOLIO</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio Profesional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+    }
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tu Nombre</h1>
+    <p>Desarrollador Full Stack | JavaScript · React · Node.js</p>
+  </header>
+
+  <section>
+    <h2>Sobre mí</h2>
+    <p>
+      Soy un desarrollador apasionado por crear soluciones funcionales y elegantes. Me especializo en el desarrollo web full stack con tecnologías modernas.
+    </p>
+  </section>
+
+  <section>
+    <h2>Proyectos destacados</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Nombre del Proyecto 1</h3>
+        <p>Descripción breve del proyecto, tecnologías utilizadas y el objetivo principal.</p>
+        <a href="#" target="_blank">Ver proyecto</a>
+      </div>
+      <div class="project-card">
+        <h3>Nombre del Proyecto 2</h3>
+        <p>Descripción breve del proyecto, tecnologías utilizadas y el objetivo principal.</p>
+        <a href="#" target="_blank">Ver proyecto</a>
+      </div>
+      <!-- Puedes duplicar más bloques como este para más proyectos -->
+    </div>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>
+      📧 correo@example.com <br>
+      💼 <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a> · 🐱 <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
