@@ -23,24 +23,7 @@
       Soy un desarrollador apasionado por crear soluciones funcionales y elegantes. Me especializo en el desarrollo web full stack con tecnologías modernas. Formado en una de las mejores academias de programacion de todo el mundo.
     </p>
   </section>
-<!--
-  <section>
-    <h2>Proyectos destacados</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Nombre del Proyecto 1</h3>
-        <p>Descripción breve del proyecto, tecnologías utilizadas y el objetivo principal.</p>
-        <a href="#" target="_blank">Ver proyecto</a>
-      </div>
-      <div class="project-card">
-        <h3>Nombre del Proyecto 2</h3>
-        <p>Descripción breve del proyecto, tecnologías utilizadas y el objetivo principal.</p>
-        <a href="#" target="_blank">Ver proyecto</a>
-      </div>
-      <!-- Puedes duplicar más bloques como este para más proyectos ->
-    </div>
-  </section>
--->
+
   <section>
     <h2>Repositorios de GitHub</h2>
     <div id="github-projects" class="projects"></div>
@@ -78,7 +61,9 @@
         card.innerHTML = `
           <h3>${repo.name}</h3>
           <p>${repo.description || "Sin descripción"}</p>
+          <div>
           <a href="${repo.html_url}" target="_blank">Ver en GitHub</a>
+          </div>
         `;
         container.appendChild(card);
       });
