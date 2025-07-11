@@ -33,6 +33,7 @@ section {
     gap: 1.5rem;
 }
 .project-card {
+    min-height: 220px;
     background: white;
     border-radius: 8px;
     padding: 1rem;
