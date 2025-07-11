@@ -63,8 +63,12 @@
             <h3>${repo.name}</h3>
             <p>${repo.description || "Sin descripción"}</p>
           </div>
-          <div>
+          <div class="project-card-2">
             <a href="${repo.html_url}" target="_blank">Ver en GitHub</a>
+            <div>
+              <i class="far fa-star"></i>
+              ${repo.stargazers_count}
+            </div>
           </div>
         `;
         container.appendChild(card);
