@@ -62,7 +62,7 @@
     .then(repos => {
       const container = document.getElementById('github-projects');
       repos.forEach(repo => {
-        if (repo.name == username)
+        if (repo.name == username || repo.name == "42Cursus")
           continue ;
         const card = document.createElement('div');
         card.classList.add('project-card');
