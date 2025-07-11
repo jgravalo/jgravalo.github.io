@@ -69,8 +69,6 @@
       repos
         .filter(repo => !gitignore.includes(repo.name))
         .forEach(repo => {
-        if (repo.name == username) // || repo.name == "42Cursus")
-          continue ;
         const card = document.createElement('div');
         card.classList.add('project-card');
         card.innerHTML = `
