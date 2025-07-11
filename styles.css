@@ -47,6 +47,10 @@ section {
 .project-card p {
     font-size: 0.95rem;
 }
+.project-card-2 {
+    display: flex;
+    justify-content: space-between;
+}
 footer {
     background-color: #111;
     color: #fff;
