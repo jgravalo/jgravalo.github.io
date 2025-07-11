@@ -59,10 +59,12 @@
         const card = document.createElement('div');
         card.classList.add('project-card');
         card.innerHTML = `
-          <h3>${repo.name}</h3>
-          <p>${repo.description || "Sin descripción"}</p>
           <div>
-          <a href="${repo.html_url}" target="_blank">Ver en GitHub</a>
+            <h3>${repo.name}</h3>
+            <p>${repo.description || "Sin descripción"}</p>
+          </div>
+          <div>
+            <a href="${repo.html_url}" target="_blank">Ver en GitHub</a>
           </div>
         `;
         container.appendChild(card);
