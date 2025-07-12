@@ -9,11 +9,45 @@ body {
     color: #333;
     line-height: 1.6;
 }
-header {
-    background-color: #111;
+nav {
     color: #fff;
-    padding: 2rem 1rem;
+    background: url(https://codeefly.net/wp/zyan/wp-content/uploads/2023/10/banner-scaled.jpg);
+    /* background-color: #000000; */
+    padding: 1rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
     text-align: center;
+}
+nav h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+    /* text-decoration: underline; */
+    text-decoration: none;
+}
+#nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+header {
+    min-height: 90vh;
+    background: url(https://codeefly.net/wp/zyan/wp-content/uploads/2023/10/banner-scaled.jpg);
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 header h1 {
     font-size: 2.5rem;
@@ -23,7 +57,7 @@ header p {
     margin-top: 0.5rem;
 }
 section {
-    padding: 1rem;
+    padding: 2rem 1rem;
     max-width: 1000px;
     margin: auto;
 }

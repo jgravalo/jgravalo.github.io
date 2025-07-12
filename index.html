@@ -4,28 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio Profesional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RANDOM_HASH_AQUI" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header style="background: url(https://codeefly.net/wp/zyan/wp-content/uploads/2023/10/banner-scaled.jpg)">
+  <nav>
+    <div class="logo">
+      <img src="https://github.com/jgravalo.png" alt="Logo de Jesús Grávalos" width="50" height="50">
+    </div>
+    <div class="logo-text">
+      <h1>JESÚS GRÁVALOS</h1>
+    </div>
+    <div id="nav-links">
+      <a href="#about-me">SOBRE MÍ</a>
+      <a href="#projects">PROYECTOS</a>
+      <a href="#contact">CONTACTO</a>
+    </div>
+    <div class="nav-icons">
+      <span><i class="fas fa-bars" style="color: white; font-size: 2rem;"></i></span>
+    </div>
+      <!--
+      <span><i class="fab fa-github"></i></span>
+      <span><i class="fab fa-linkedin"></i></span>
+      <span><i class="fas fa-envelope"></i></span>
+    -->
+  </nav>
+  <header>
     <h1>Jesús Alberto Grávalos Olivier</h1>
     <p>Desarrollador Full Stack | C/C++ · Python · JavaScript</p>
   </header>
-
-  <section>
+  <hr>
+  <section id="about-me">
     <h2>Sobre mí</h2>
     <p>
       Soy un desarrollador apasionado por crear soluciones funcionales y elegantes. Me especializo en el desarrollo web full stack con tecnologías modernas. Formado en una de las mejores academias de programacion de todo el mundo.
     </p>
   </section>
-
-  <section>
-    <h2>Repositorios de GitHub</h2>
+  <hr>
+  <section id="projects">
+    <h2>Proyectos</h2>
     <div id="github-projects" class="projects"></div>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Contacto</h2>
     <p>
       📧 <a href="mailto:jesus.gravalos@outlook.com" target="_blank">jesus.gravalos@outlook.com</a> <br>
