@@ -34,6 +34,13 @@ nav a:hover {
     /* text-decoration: underline; */
     text-decoration: none;
 }
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    margin-right: 1.5rem;
+}
 #nav-links {
     display: flex;
     gap: 1.5rem;
@@ -45,7 +52,7 @@ header {
     padding: 5rem 1rem;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
@@ -56,6 +63,73 @@ header p {
     font-size: 1.2rem;
     margin-top: 0.5rem;
 }
+/* .hexagon-border {
+  width: 400px;
+  aspect-ratio: 1 / 1;
+  clip-path: polygon(
+    50% 0%, 
+    93% 25%, 
+    93% 75%, 
+    50% 100%, 
+    7% 75%, 
+    7% 25%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.hexagon {
+    width: 90%;
+    height: 90%;
+    clip-path: inherit;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.hexagon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+.hexagon-border {
+  width: 450px;
+  aspect-ratio: 1 / 1;
+  background: white; /* color del borde */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(
+    50% 0%, 93% 25%, 93% 75%,
+    50% 100%, 7% 75%, 7% 25%
+  );
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* sombra suave */
+  transition: transform 0.3s ease;
+}
+
+.hexagon-border:hover {
+  transform: scale(1.05); /* efecto hover sutil */
+}
+
+.hexagon {
+  width: 92%;
+  height: 92%;
+  clip-path: inherit;
+  overflow: hidden;
+  border-radius: 12px; /* redondea visualmente las aristas */
+}
+
+.hexagon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+/*   position: absolute;
+  transition: transform 0.3s ease; */
+}
+
+.hexagon img:hover {
+  transform: scale(1.05);
+}
 section {
     padding: 2rem 1rem;
     max-width: 1000px;
@@ -63,6 +137,9 @@ section {
 }
 h2 {
     margin: 10px 0;
+}
+#about-me p {
+    font-size: 1rem;
 }
 .projects {
     display: grid;
