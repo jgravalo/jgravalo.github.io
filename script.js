@@ -1,3 +1,4 @@
+// github repos
 const username = "jgravalo";
 const gitignore = [
     "jgravalo.github.io",
@@ -10,7 +11,7 @@ const gitignore = [
     "CPP_modules_2",
   ];
 
-  fetch(`https://api.github.com/users/${username}/repos`)
+fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())
     .then(repos => {
       const container = document.getElementById('github-projects');
@@ -42,3 +43,29 @@ const gitignore = [
     .catch(error => {
       console.error("Error al cargar los repositorios:", error);
     });
+
+// slider
+
+/* const slider = document.getElementById("skill-slider"); */
+const sliders = document.querySelectorAll(".slider-container");
+
+for (const slider of sliders) {
+  const slide = slider.querySelector(".slider");
+  const prevBtn = slider.querySelector(".prev");
+  const nextBtn = slider.querySelector(".next");
+  /* console.log("slider = ", slider);
+  console.log("prevBtn = ", prevBtn);
+  console.log("nextBtn = ", nextBtn); */
+
+  prevBtn.addEventListener("click", () => {
+    const len = slider.querySelector(".slide").clientWidth;
+    /* console.log("prev = ", -len); */
+    slide.scrollBy({ left: -len, behavior: "smooth" });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    const len = slider.querySelector(".slide").clientWidth;
+    /* console.log("next = ", len); */
+    slide.scrollBy({ left: len, behavior: "smooth" });
+  });
+}

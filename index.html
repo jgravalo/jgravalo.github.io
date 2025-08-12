@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RANDOM_HASH_AQUI" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="slider.css">
+  <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="contacts.css">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -26,6 +29,8 @@
     </div>
     <div id="nav-links">
       <a href="#about-me">ABOUT ME</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#archievements">ARCHIEVEMENTS</a>
       <a href="#projects">PROJECTS</a>
       <a href="#contact">CONTACT</a>
     </div>
@@ -77,31 +82,127 @@
     </p>
   </section>
   <hr>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="slider-container">
+      <button class="slide-btn prev" id="skill-slider-prev">&#10094;</button>
+
+      <div class="slider" id="skill-slider">
+        <div class="slide">
+          <div class="skill-group">
+            <div class="skill"><p>Python</p><span style="width: 100%;"></span></div>
+            <div class="skill"><p>C++</p><span style="width: 100%;"></span></div>
+            <div class="skill"><p>C</p><span style="width: 90%;"></span></div>
+            <div class="skill"><p>Django</p><span style="width: 90%;"></span></div>
+            <div class="skill"><p>NodeJS</p><span style="width: 65%;"></span></div>
+            <div class="skill"><p>PHP</p><span style="width: 70%;"></span></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="skill-group">
+            <div class="skill"><p>JavaScript</p><span style="width: 100%;"></span></div>
+            <div class="skill"><p>React</p><span style="width: 90%;"></span></div>
+            <div class="skill"><p>HTML</p><span style="width: 90%;"></span></div>
+            <div class="skill"><p>CSS</p><span style="width: 80%;"></span></div>
+            <div class="skill"><p>Bootstrap</p><span style="width: 65%;"></span></div>
+            <!-- <div class="skill"><p>XML</p><span style="width: 65%;"></span></div> -->
+          </div>
+        </div>
+<!--         <div class="slide">contenido 3</div>
+        <div class="slide">contenido 4</div> -->
+      </div>
+
+      <button class="slide-btn next" id="skill-slider-next">&#10095;</button>
+    </div>
+
+    <!-- <ul>
+      <li>Programming Languages: C, C++, Python, JavaScript, HTML, CSS</li>
+      <li>Web Development: React, Node.js, Express.js</li>
+      <li>Database Management: MySQL, PostgreSQL</li>
+      <li>Version Control: Git, GitHub</li>
+      <li>Containerization: Docker</li>
+      <li>Web Servers: NGINX</li>
+      <li>Cloud Services: AWS, Azure</li>
+      <li>Data Visualization: Grafana</li>
+      <li>Smart Contracts: Solidity (in progress)</li>
+    </ul>
+    <p>
+      I am constantly updating my skills and knowledge to keep up with the latest industry trends and technologies.
+    </p> -->
+  </section>
+  <hr>
+  <section id="archievements">
+    <h2>Archievements</h2>
+<!--     <ul>
+      <li>Graduated from Fundación Telefónica’s 42 Barcelona Academy.</li>
+      <li>Participated in NASA Space Apps 2024, where I contributed to the development of a web application for space data visualization.</li>
+      <li>Attended major tech events such as Mobile World Congress, Integrated Systems Europe, and VMware Explore.</li>
+      <li>Contributed to open-source projects on GitHub, enhancing my skills in collaborative software development.</li>
+      <li>Completed various online courses to deepen my knowledge in web development, cloud computing, and data visualization.</li>
+    </ul> -->
+<!--     <div>
+      <img alt="jgravalo's badge" src="https://badge.mediaplus.ma/binary/jgravalo?1337Badge=off&UM6P=off">
+    </div>
+    <div>
+      <img class="badge" alt="42 junior developer certification" src="https://www.42network.org/wp-content/uploads/2024/11/Credly-Junior-Developper-1000x1000.png">
+    </div> -->
+
+    <div class="slider-container">
+      <button class="slide-btn prev" id="archievement-slider-prev">&#10094;</button>
+      <div class="slider" id="archievement-slider">
+        <div class="slide">
+          <div class="badge-container">
+            <img class="badge" alt="42 Junior Developer certification" src="https://www.42network.org/wp-content/uploads/2024/11/Credly-Junior-Developper-1000x1000.png">
+            <div class="badge-description">
+              <h1>42 Junior Developer Certification</h1>
+              <h4>Fundación Telefónica 42 Barcelona Academy</h4>
+              <p>Awarded the Junior Developer credential by 42 Network upon completion of the Common Core program. Demonstrated proficiency in C programming, Unix systems, algorithms, and project-based problem solving, along with strong collaboration skills developed through peer-to-peer learning in an intensive, self-driven environment.</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="badge-container">
+            <img alt="NASA Space Apps Challenge certification" src="src/Diploma NASA Space Apps Challenge.pdf">
+            <div class="badge-description">
+              <h1>Galactic Problem Solver Certification</h1>
+              <h4>NASA Space Apps Challenge</h4>
+              <p>Participated in the 2024 NASA International Space Apps Challenge, contributing to solutions for real-world challenges on Earth and in space through data analysis, creative problem-solving, and multidisciplinary collaboration.</p>
+            </div>
+          </div>
+        </div>
+<!--         <div class="slide">contenido 2</div>
+        <div class="slide">contenido 3</div>
+        <div class="slide">contenido 4</div> -->
+      </div>
+      <button class="slide-btn next" id="archievement-slider-next">&#10095;</button>
+    </div>
+    
+  </section>
+  <hr>
   <section id="projects">
     <h2>Projects</h2>
     <div id="github-projects" class="projects"></div>
   </section>
-
-  <section id="contact" class="contact-section">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Do you have an interesting project or proposal? I’m available for collaborations and professional opportunities.</p>
-    <div class="contact-info">
-      <a href="mailto:jesus.gravalos@outlook.com" style="background-color: #EA4335;">
-        <img src="https://img.shields.io/badge/Gmail-100000?&style=for-the-badge&logo=Gmail&logoColor=white&labelColor=EA4335&color=EA4335" alt="Gmail" />
-      </a>
-      <a href="https://www.linkedin.com/in/jgravalo" target="_blank" style="background-color: #0077b5;">
-        <svg class="icon" viewBox="0 0 24 24" aria-label="LinkedIn" role="img" fill="currentColor">
-          <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.4v1.56h.05c.47-.9 1.62-1.85 3.34-1.85 3.57 0 4.23 2.35 4.23 5.41v6.34zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.22.79 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
-        </svg>
-        <img src="https://img.shields.io/badge/LinkedIn-100000?&style=for-the-badge&logo=LinkedIn&logoColor=white&labelColor=0077B5&color=0077B5" alt="LinkedIn" />
-      </a>
-      <a href="https://github.com/jgravalo" target="_blank" style="background-color: #161B22;">
-        <img src="https://img.shields.io/badge/GitHub-100000?&style=for-the-badge&logo=GitHub&logoColor=white&labelColor=161B22&color=161B22" alt="GitHub" />
-      </a>
+    <div class="contact-section">
+      <p>Do you have an interesting project or proposal? I’m available for collaborations and professional opportunities.</p>
+      <div class="contact-info">
+        <a href="mailto:jesus.gravalos@outlook.com" style="background-color: #EA4335;">
+          <img src="https://img.shields.io/badge/Gmail-100000?&style=for-the-badge&logo=Gmail&logoColor=white&labelColor=EA4335&color=EA4335" alt="Gmail" />
+        </a>
+        <a href="https://www.linkedin.com/in/jgravalo" target="_blank" style="background-color: #0077b5;">
+          <svg class="icon" viewBox="0 0 24 24" aria-label="LinkedIn" role="img" fill="currentColor">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.4v1.56h.05c.47-.9 1.62-1.85 3.34-1.85 3.57 0 4.23 2.35 4.23 5.41v6.34zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.22.79 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+          </svg>
+          <img src="https://img.shields.io/badge/LinkedIn-100000?&style=for-the-badge&logo=LinkedIn&logoColor=white&labelColor=0077B5&color=0077B5" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/jgravalo" target="_blank" style="background-color: #161B22;">
+          <img src="https://img.shields.io/badge/GitHub-100000?&style=for-the-badge&logo=GitHub&logoColor=white&labelColor=161B22&color=161B22" alt="GitHub" />
+        </a>
+      </div>
     </div>
   </section>
-
-
 
   <footer>
     <p>&copy; 2025 Jesús Alberto Grávalos Olivier. All rights reserved.</p>

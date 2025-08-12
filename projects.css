@@ -1,0 +1,30 @@
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    min-height: 220px;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    margin-bottom: 0.2rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+}
+
+.project-card-2 {
+    display: flex;
+    justify-content: space-between;
+}
