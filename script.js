@@ -58,13 +58,23 @@ for (const slider of sliders) {
   console.log("nextBtn = ", nextBtn); */
 
   prevBtn.addEventListener("click", () => {
-    const len = slider.querySelector(".slide").clientWidth;
+    const len = slider.querySelector(".slide").clientWidth + 
+      parseInt(getComputedStyle(slider.querySelector(".slide")).marginRight);
+    if (slide.scrollLeft < len) {
+      slide.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
     /* console.log("prev = ", -len); */
     slide.scrollBy({ left: -len, behavior: "smooth" });
   });
 
   nextBtn.addEventListener("click", () => {
-    const len = slider.querySelector(".slide").clientWidth;
+    const len = slider.querySelector(".slide").clientWidth + 
+      parseInt(getComputedStyle(slider.querySelector(".slide")).marginRight);
+    if (slide.scrollLeft + slide.clientWidth >= slide.scrollWidth - len) {
+      slide.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
     /* console.log("next = ", len); */
     slide.scrollBy({ left: len, behavior: "smooth" });
   });

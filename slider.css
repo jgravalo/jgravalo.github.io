@@ -58,16 +58,18 @@
   display: grid;
   gap: 16px;
   /* crea tantas columnas como quepan de al menos 240px */
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
 }
 
 .skill {
 /*   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0; */
-  margin: 1.5rem;
+  margin: 1.5rem; */
   background: #151c25;
+  /* width: 70%; */
 }
 
 .skill p {
@@ -92,4 +94,21 @@
   gap: 1rem;
   justify-content: center;
   align-items: center;
+}
+
+.badge {
+  max-width: 300px;
+  max-height: 300px;
+  /* border-radius: 50%; */
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .badge-container {
+    flex-direction: column;
+  }
 }
