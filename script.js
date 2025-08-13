@@ -57,9 +57,14 @@ for (const slider of sliders) {
   console.log("prevBtn = ", prevBtn);
   console.log("nextBtn = ", nextBtn); */
 
-  prevBtn.addEventListener("click", () => {
+  prevBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     const len = slider.querySelector(".slide").clientWidth + 
-      parseInt(getComputedStyle(slider.querySelector(".slide")).marginRight);
+      16  /* 16px is the marginRight */;
+      /* parseInt(getComputedStyle(slider.querySelector(".slide")).marginRight); */
+    console.log("marginRight = ", parseInt(getComputedStyle(slider.querySelector(".slide")).marginRight));
+    console.log("slide.scrollLeft = ", slide.scrollLeft, " < len = ", len);
     if (slide.scrollLeft < len) {
       slide.scrollTo({ left: 0, behavior: "smooth" });
       return;
@@ -68,10 +73,16 @@ for (const slider of sliders) {
     slide.scrollBy({ left: -len, behavior: "smooth" });
   });
 
-  nextBtn.addEventListener("click", () => {
+  nextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     const len = slider.querySelector(".slide").clientWidth + 
-      parseInt(getComputedStyle(slider.querySelector(".slide")).marginRight);
-    if (slide.scrollLeft + slide.clientWidth >= slide.scrollWidth - len) {
+      16  /* 16px is the marginRight */;
+      /* parseInt(getComputedStyle(slider.querySelector(".slide")).marginRight); */
+    console.log("marginRight = ", parseInt(getComputedStyle(slider.querySelector(".slide")).marginRight));
+    console.log("slide.scrollLeft = ", slide.scrollLeft, "+ slide.clientWidth = ", slide.clientWidth,
+      " >= slide.scrollWidth = ", slide.scrollWidth, " - len = ", len);
+    if (slide.scrollLeft + slide.clientWidth >= slide.scrollWidth - len + 16) {
       slide.scrollTo({ left: 0, behavior: "smooth" });
       return;
     }
