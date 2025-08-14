@@ -59,6 +59,9 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.logo-image-container a {
     color: #000;
     font-size: 2.5rem;
 }
