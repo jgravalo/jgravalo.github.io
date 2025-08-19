@@ -8,7 +8,7 @@ const gitignore = [
     "ft_printf",
     "Libft",
     "Get_next_line",
-    "CPP_modules_2",
+    "CPP_Modules_0-4",
   ];
 
 fetch(`https://api.github.com/users/${username}/repos`)
