@@ -25,8 +25,9 @@ fetch(`https://api.github.com/users/${username}/repos`)
           <div>
             <h3>${repo.name}</h3>
             <p>${repo.description || "No description"}</p>
-	    	<span>${repo.language}</span>
-          </div>
+			</div>
+		  <div>
+	      <span>${repo.language}</span>
           <div class="project-card-2">
             <a href="${repo.html_url}" target="_blank">See on GitHub</a>
             <!--
@@ -36,6 +37,7 @@ fetch(`https://api.github.com/users/${username}/repos`)
             </div>
             <span>${repo.language}</span>
             -->
+          </div>
           </div>
         `;
         container.appendChild(card);
