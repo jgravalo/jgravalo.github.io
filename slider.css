@@ -110,6 +110,10 @@
   margin-top: 1rem;
 }
 
+.badge-description p {
+	color: #ccc;
+}
+
 @media (max-width: 768px) {
   .skill {
     margin: 0rem;

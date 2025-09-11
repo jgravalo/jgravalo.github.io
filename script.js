@@ -27,17 +27,17 @@ fetch(`https://api.github.com/users/${username}/repos`)
             <p>${repo.description || "No description"}</p>
 			</div>
 		  <div>
-	      <span>${repo.language}</span>
-          <div class="project-card-2">
-            <a href="${repo.html_url}" target="_blank">See on GitHub</a>
-            <!--
-            <div>
-              <i class="far fa-star"></i>
-              <span>${repo.stargazers_count}</span>
-            </div>
-            <span>${repo.language}</span>
-            -->
-          </div>
+			<span>${repo.language}</span>
+			<div class="project-card-2">
+				<a href="${repo.html_url}" target="_blank">See on GitHub</a>
+				<!--
+				<div>
+				<i class="far fa-star"></i>
+				<span>${repo.stargazers_count}</span>
+				</div>
+				<span>${repo.language}</span>
+				-->
+			</div>
           </div>
         `;
         container.appendChild(card);
