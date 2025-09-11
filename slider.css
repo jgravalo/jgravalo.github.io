@@ -21,7 +21,8 @@
   flex: 0 0 80%; /* cada slide ocupa el 80% del contenedor */
   /* min-width: 300px; */
   min-width: 100%;
-  background: #eee;
+  /* background: #eee; */
+  background: #000;
   border-radius: 8px;
   padding: 2rem;
   box-sizing: border-box;

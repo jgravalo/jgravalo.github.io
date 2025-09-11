@@ -7,7 +7,8 @@
 
 .project-card {
     min-height: 220px;
-    background: white;
+    /* background: white; */
+    background: black;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
