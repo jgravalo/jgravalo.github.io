@@ -9,6 +9,7 @@ const gitignore = [
     "Libft",
     "Get_next_line",
     "CPP0-4",
+    "CPP5-9",
   ];
 
 fetch(`https://api.github.com/users/${username}/repos`)
@@ -23,8 +24,8 @@ fetch(`https://api.github.com/users/${username}/repos`)
         card.innerHTML = `
           <div>
             <h3>${repo.name}</h3>
-	    <span>${repo.language}</span>
             <p>${repo.description || "No description"}</p>
+	    	<span>${repo.language}</span>
           </div>
           <div class="project-card-2">
             <a href="${repo.html_url}" target="_blank">See on GitHub</a>

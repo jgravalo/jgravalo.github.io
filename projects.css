@@ -6,7 +6,7 @@
 }
 
 .project-card {
-    min-height: 220px;
+	min-height: 220px;
     /* background: white; */
     background: black;
     border-radius: 8px;
@@ -15,6 +15,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.project-card p {
+	color: #ccc;
 }
 
 .project-card h3 {
