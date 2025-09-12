@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    /* background-color: #f5f5f5; */
+    background-color: #151c25;
+    /* color: #333; */
+    color: #fff;
+    line-height: 1.6;
+}
+
+nav {
+    color: #fff;
+    background: url(https://codeefly.net/wp/zyan/wp-content/uploads/2023/10/banner-scaled.jpg);
+    /* background-color: #000000; */
+    /* padding: 1rem 10rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav p {
+    font-size: 1.5rem;
+    margin: 0rem 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+    /* text-decoration: underline; */
+    text-decoration: none;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    background-color: aquamarine;
+    padding: 1rem;
+}
+
+.logo-image-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-image-container a {
+    color: #000;
+    font-size: 2.5rem;
+}
+
+.logo-image-container span {
+    display: block;
+    height: 2px;
+    width: 50%;
+    background-color: #000;
+    margin: 5px;
+}
+
+.logo img {
+    margin-right: 1.5rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+#nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    /* flex-direction: column; */
+    /* padding: 1rem; */
+  }
+  #nav-links {
+    display: none;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+}
+
+.nav-icons-container {
+    /* height: 36px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+}
+
+header {
+    min-height: 90vh;
+    background: url(https://codeefly.net/wp/zyan/wp-content/uploads/2023/10/banner-scaled.jpg);
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.hexagon-border {
+  width: 450px;
+  aspect-ratio: 1 / 1;
+  background: white; /* color del borde */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(
+    50% 0%, 93% 25%, 93% 75%,
+    50% 100%, 7% 75%, 7% 25%
+  );
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* sombra suave */
+  transition: transform 0.3s ease;
+}
+
+.hexagon-border:hover {
+  transform: scale(1.05); /* efecto hover sutil */
+}
+
+.hexagon {
+  width: 92%;
+  height: 92%;
+  clip-path: inherit;
+  overflow: hidden;
+  border-radius: 12px; /* redondea visualmente las aristas */
+}
+
+.hexagon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+/*   position: absolute;
+  transition: transform 0.3s ease; */
+}
+
+.hexagon img:hover {
+  transform: scale(1.05);
+}
+section {
+  padding: 4.5rem 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  margin: 30px 0;
+  font-size: 3rem;
+}
+
+#about-me p {
+    font-size: 1rem;
+}
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/*  */
+
