@@ -12,10 +12,11 @@ const gitignore = [
     "CPP5-9",
   ];
 let m = new Map();
+m.set("webserv", ["NGINX", "Python", "PHP"]);
+m.set("Inception", ["NGINX", "MySQL", "Wordpress"]);
 m.set("ft_transcendence", ["Javascript", "PostgreSQL", "NGINX", "Docker", "Redis"]);
 m.set("Test_Full_Stack", ["PostgreSQL", "Docker", "Redis"]);
 m.set("Test_Data_Science", ["MySQL", "Docker"]);
-m.set("webserv", ["NGINX", "Python", "PHP"]);
 
 fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())
