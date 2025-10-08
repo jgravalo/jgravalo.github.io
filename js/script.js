@@ -17,6 +17,7 @@ m.set("Inception", ["NGINX", "MySQL", "Wordpress"]);
 m.set("ft_transcendence", ["Javascript", "PostgreSQL", "NGINX", "Docker", "Redis"]);
 m.set("Task-Management-System", ["PostgreSQL", "Docker", "Redis"]);
 m.set("Email-Miner-LLM", ["MySQL", "Docker"]);
+m.set("Mini-Pokedex", ["React", "NodeJS"]);
 
 fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())
