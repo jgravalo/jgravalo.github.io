@@ -10,6 +10,7 @@ const gitignore = [
     "Get_next_line",
     "CPP0-4",
     "CPP5-9",
+    "Push_swap",
   ];
 let m = new Map();
 m.set("webserv", ["NGINX", "Python", "PHP"]);
