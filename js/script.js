@@ -19,6 +19,8 @@ m.set("ft_transcendence", ["Javascript", "PostgreSQL", "NGINX", "Docker", "Redis
 m.set("Task-Management-System", ["PostgreSQL", "Docker", "Redis"]);
 m.set("Email-Miner-LLM", ["MySQL", "Docker"]);
 m.set("Mini-Pokedex", ["React", "NodeJS"]);
+m.set("HydroData_Frontend", ["React", "NodeJS"]);
+m.set("HydroData_Backend", ["Spring", "Spring Boot"]);
 
 fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())
