@@ -15,8 +15,8 @@ body {
 
 nav {
     color: #fff;
-    background: url(https://codeefly.net/wp/zyan/wp-content/uploads/2023/10/banner-scaled.jpg);
-    /* background-color: #000000; */
+    /* background: url(https://codeefly.net/wp/zyan/wp-content/uploads/2023/10/banner-scaled.jpg); */
+    background-color: #151c25;
     /* padding: 1rem 10rem; */
     display: flex;
     justify-content: space-between;
