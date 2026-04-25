@@ -90,28 +90,34 @@ function Nav({ cartCount }) {
   );
 }
 
-function Footer() {
+function FooterLinks() {
   const cols = [
     { title: "Tienda", links: ["Colecciones", "Novedades", "Ofertas", "Bestsellers"] },
     { title: "Información", links: ["Sobre Nosotros", "Envíos", "Devoluciones", "FAQ"] },
     { title: "Legal", links: ["Privacidad", "Términos de uso", "Cookies", "Contacto"] },
   ];
   return (
-    <footer>
-      <div className="footer-grid">
-        <div>
-          <div className="footer-brand-name">Tu Marca</div>
-          <p className="footer-brand-desc">Diseño español con alma propia. Cada producto pensado para durar y para destacar.</p>
-        </div>
-        {cols.map((c) => (
-          <div key={c.title}>
-            <div className="footer-col-title">{c.title}</div>
-            <ul className="footer-links">
-              {c.links.map((l) => <li key={l}><a href="#">{l}</a></li>)}
-            </ul>
-          </div>
-        ))}
+    <div className="footer-grid">
+      <div>
+        <div className="footer-brand-name">Tu Marca</div>
+        <p className="footer-brand-desc">Diseño español con alma propia. Cada producto pensado para durar y para destacar.</p>
       </div>
+      {cols.map((c) => (
+        <div key={c.title}>
+          <div className="footer-col-title">{c.title}</div>
+          <ul className="footer-links">
+            {c.links.map((l) => <li key={l}><a href="#">{l}</a></li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <FooterLinks />
       <div className="footer-bottom">
         <div className='footer-logo'>
           {/* <img src={logo_ver} alt="Tu Marca" /> */}

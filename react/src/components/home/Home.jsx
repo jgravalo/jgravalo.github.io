@@ -46,14 +46,43 @@ function useReveal() {
 function useRepos() {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const gitignore = [
+    "jgravalo.github.io",
+    "jgravalo",
+    "42Cursus",
+    "react-portfolio",
+
+    "Libft",
+    "ft_printf",
+    "Get_next_line",
+    "CPP0-4",
+    "CPP5-9",
+    "Push_swap",
+  ];
 
   useEffect(() => {
+    // console.log('Fetching repos from GitHub...');
     fetch('https://api.github.com/users/jgravalo/repos')
-      .then(r => r.json())
-      .then(data => setRepos(data.filter(r => !r.fork)))
-      .catch(() => setRepos([]))
-      .finally(() => setLoading(false));
+      .then(r => {
+        // // console.log('Response status:', r.status);
+        return r.json();
+      })
+      .then(data => {
+        // console.log('Raw data received:', data);
+        const filtered = data.filter(r => !gitignore.includes(r.name));
+        // console.log('Filtered repos (not in gitignore):', filtered);
+        setRepos(filtered);
+      })
+      .catch(error => {
+        // console.error('Error fetching repos:', error);
+        setRepos([]);
+      })
+      .finally(() => {
+        // console.log('Fetch completed');
+        setLoading(false);
+      });
   }, []);
+  // console.log("Repos loaded:", repos);
   return { repos, loading };
 }
 
@@ -67,12 +96,12 @@ function Hero() {
       <div className="hero-content">
         <div className="hero-tag">Open to Work</div>
         <h1 className="hero-title">
-          Diseño<br />
-          que <em>transforma</em><br />
-          tu espacio
+          Development
+          that <em>transforms</em><br />
+          your space
         </h1>
         <p className="hero-desc">
-          Cada pieza, una declaración de intenciones. Craftsmanship español con visión contemporánea.
+          Each piece, a statement of intent. Young craftsmanship with a contemporary vision.
         </p>
         <div className="hero-cta">
           <a href="#products" className="btn-primary">Ver Colección</a>
@@ -219,6 +248,11 @@ function getLanguageColor(language) {
 
 function Projects({ onAdd }) {
   const { repos, loading } = useRepos();
+  const [showAll, setShowAll] = useState(false);
+  const initialCount = 8;
+
+  const displayedRepos = showAll ? repos : repos.slice(0, initialCount);
+  const hasMore = repos.length > initialCount;
 
   return (
     <section className="projects" id="projects">
@@ -232,11 +266,21 @@ function Projects({ onAdd }) {
       <div className="projects-grid">
         {loading
           ? Array(4).fill(null).map((_, i) => (
-              <div key={i} className="product-card skeleton reveal" />
+              <div key={i} className="repo-card skeleton reveal" />
             ))
-          : repos.slice(0, 8).map((r) => <RepoCard key={r.id} repo={r} />)
+          : displayedRepos.map((r) => <RepoCard key={r.id} repo={r} />)
         }
       </div>
+      {hasMore && !loading && (
+        <div className="projects-footer">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="show-more-btn"
+          >
+            {showAll ? 'Mostrar menos' : `Mostrar más (${repos.length - initialCount})`}
+          </button>
+        </div>
+      )}
     </section>
   );
 }
@@ -346,7 +390,7 @@ export default function Home({ onAdd }) {
       <Projects onAdd={onAdd} />
       {/* <StripCta /> */}
       <Founders />
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 }

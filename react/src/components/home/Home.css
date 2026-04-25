@@ -232,6 +232,29 @@
     border-color: var(--accent);
     color: var(--accent);
   }
+
+  /* PROJECTS FOOTER */
+  .projects-footer {
+    text-align: center;
+    margin-top: 48px;
+  }
+  .show-more-btn {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    padding: 12px 24px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+  }
+  .show-more-btn:hover {
+    background: var(--accent2);
+    transform: translateY(-2px);
+  }
   .project-img-wrap {
     position: relative; aspect-ratio: 3/4; overflow: hidden;
     background: var(--surface); margin-bottom: 20px;
