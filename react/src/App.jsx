@@ -78,7 +78,7 @@ function Nav({ cartCount }) {
         <span className="nav-logo-desc">DEVELOPER</span>
       </a>
       <ul className="nav-links">
-        {["Collections", "Projects", "About me", "Contact"].map((l) => (
+        {["Skills", "Projects", "About me", "Contact"].map((l) => (
           <li key={l}><a href={`#${l.toLowerCase().replace(" ", "-")}`}>{l}</a></li>
         ))}
       </ul>

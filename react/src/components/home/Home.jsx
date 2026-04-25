@@ -97,34 +97,34 @@ function Marquee() {
   );
 }
 
-const collections = [
-  { num: "01", name: "SUN COLLECTION", icon: "🏺" },
-  { num: "02", name: "OPTICAL COLLECTION", icon: "◆" },
-  { num: "03", name: "CAPSULE 01", icon: "◉" },
+const skills = [
+  { num: "01", name: "BACK END", icon: "🏺" },
+  { num: "02", name: "FRONT END", icon: "◆" },
+  { num: "03", name: "DEVOPS", icon: "◉" },
 ];
 
-function Collections() {
+function Skills() {
   return (
-    <section className="collections">
+    <section className="skills" id="skills">
       <div className="section-header reveal">
         <div>
-          <div className="section-label">Explorar</div>
-          <h2 className="section-title">Nuestras <em>Colecciones</em></h2>
+          <div className="section-label">Skills</div>
+          <h2 className="section-title">My <em>Stack</em></h2>
         </div>
-        <a href="#" className="view-all">Ver todo</a>
+        <a href="#" className="view-all">See all</a>
       </div>
-      <div className="collections-grid">
-        {collections.map((c, i) => (
-          <div key={c.num} className={`collection-card reveal${i > 0 ? ` reveal-delay-${i}` : ""}`}>
+      <div className="skills-grid">
+        {skills.map((c, i) => (
+          <div key={c.num} className={`skill-card reveal${i > 0 ? ` reveal-delay-${i}` : ""}`}>
             <div className="img-placeholder">
               <span className="img-icon" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>
                 {c.icon}
               </span>
             </div>
-            <div className="collection-overlay">
-              <div className="collection-num">{c.num}</div>
-              <div className="collection-name">{c.name}</div>
-              <a href="#" className="collection-link">Descubrir</a>
+            <div className="skill-overlay">
+              <div className="skill-num">{c.num}</div>
+              <div className="skill-name">{c.name}</div>
+              <a href="#" className="skill-link">Descubrir</a>
             </div>
           </div>
         ))}
@@ -134,23 +134,87 @@ function Collections() {
 }
 
 function RepoCard({ repo }) {
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  };
+
   return (
-    <div className="product-card reveal">
-      <div className="product-img-wrap">
-        <div className="product-placeholder">
-          <span className="product-placeholder-icon">📁</span>
+    <div className="repo-card reveal">
+      <div className="repo-header">
+        <h3 className="repo-title">{repo.name}</h3>
+        <div className="repo-stats">
+          {repo.stargazers_count > 0 && (
+            <span className="repo-stat">
+              <span className="stat-icon">⭐</span>
+              {repo.stargazers_count}
+            </span>
+          )}
+          {repo.forks_count > 0 && (
+            <span className="repo-stat">
+              <span className="stat-icon">🍴</span>
+              {repo.forks_count}
+            </span>
+          )}
         </div>
-        {repo.language && <div className="product-badge">{repo.language}</div>}
       </div>
-      <div className="product-info">
-        <div className="product-brand">GitHub</div>
-        <div className="product-name">{repo.name}</div>
-        <div className="product-price">
-          <strong>{repo.stargazers_count} ⭐</strong>
-        </div>
+
+      <p className="repo-description">
+        {repo.description || "No description available"}
+      </p>
+
+      <div className="repo-footer">
+        {repo.language && (
+          <span className="repo-language">
+            <span className="language-dot" style={{ backgroundColor: getLanguageColor(repo.language) }}></span>
+            {repo.language}
+          </span>
+        )}
+        <span className="repo-updated">
+          Updated {formatDate(repo.updated_at)}
+        </span>
+      </div>
+
+      <div className="repo-actions">
+        <a
+          href={repo.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="repo-link"
+        >
+          View on GitHub →
+        </a>
       </div>
     </div>
   );
+}
+
+// Helper function for language colors
+function getLanguageColor(language) {
+  const colors = {
+    JavaScript: '#f1e05a',
+    TypeScript: '#2b7489',
+    Python: '#3572A5',
+    Java: '#b07219',
+    'C++': '#f34b7d',
+    'C#': '#178600',
+    PHP: '#4F5D95',
+    Ruby: '#701516',
+    Go: '#00ADD8',
+    Rust: '#dea584',
+    Swift: '#ffac45',
+    Kotlin: '#F18E33',
+    Dart: '#00B4AB',
+    HTML: '#e34c26',
+    CSS: '#563d7c',
+    Shell: '#89e051',
+    Vue: '#2c3e50',
+    React: '#61dafb'
+  };
+  return colors[language] || '#586069';
 }
 
 function Projects({ onAdd }) {
@@ -247,7 +311,7 @@ function Contact() {
 
   return (
     <section className="contact reveal" id="contact">
-      <div className="section-label" style={{ justifyContent: "center", marginBottom: 16 }}>Newsletter</div>
+      <div className="section-label" style={{ justifyContent: "center", marginBottom: 16 }}>Contact</div>
       <h2 className="contact-title">Primero en <em>enterarte</em></h2>
       <p className="contact-sub">Lanzamientos, ofertas exclusivas y novedades. Sin spam.</p>
       {status === "ok" ? (
@@ -278,7 +342,7 @@ export default function Home({ onAdd }) {
     <>
       <Hero />
       {/* <Marquee /> */}
-      <Collections />
+      <Skills />
       <Projects onAdd={onAdd} />
       {/* <StripCta /> */}
       <Founders />
