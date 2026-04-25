@@ -132,6 +132,7 @@
   .projects-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; }
 
   .repo-card {
+    min-height: 250px; display: flex; flex-direction: column; justify-content: space-between;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
