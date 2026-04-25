@@ -378,7 +378,7 @@
   .reveal-delay-2 { transition-delay: 0.3s; }
   .reveal-delay-3 { transition-delay: 0.45s; }
 
-  @media (max-width: 768px) {  npm create vite@latest . -- --template react
+  @media (max-width: 768px) {
     #nav { padding: 20px 24px; }
     .nav-links { display: none; }
     .hero-content, .skills, .projects, .founders, .newsletter, footer { padding-left: 24px; padding-right: 24px; }
@@ -390,7 +390,7 @@
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   }
 
-  @media (max-width: 1325px) {  npm create vite@latest . -- --template react
+  @media (max-width: 1325px) {
     #nav { padding: 20px 24px; }
     .nav-links { /* display: none; */ gap: 20px;}
     #logo-bl { display: block; }
