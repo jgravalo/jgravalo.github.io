@@ -84,7 +84,7 @@ function Nav({ cartCount }) {
       </ul>
       <div className="nav-actions">
         <button>Search</button>
-        <button className="cart-btn">Carrito ({cartCount})</button>
+        {/* <button className="cart-btn">Carrito ({cartCount})</button> */}
       </div>
     </nav>
   );
