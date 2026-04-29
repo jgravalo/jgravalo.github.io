@@ -129,10 +129,11 @@
 
   /* PROJECTS */
   .projects { padding: 100px 48px; }
-  .projects-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; }
+  .projects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .projects-footer { display: flex; justify-content: center; margin-top: 40px; }
 
   .repo-card {
-    min-height: 250px; display: flex; flex-direction: column; justify-content: space-between;
+    min-height: 280px; display: flex; flex-direction: column; justify-content: space-between;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -233,11 +234,6 @@
     color: var(--accent);
   }
 
-  /* PROJECTS FOOTER */
-  .projects-footer {
-    text-align: center;
-    margin-top: 48px;
-  }
   .show-more-btn {
     background: var(--accent);
     color: var(--bg);
@@ -378,24 +374,76 @@
   .reveal-delay-2 { transition-delay: 0.3s; }
   .reveal-delay-3 { transition-delay: 0.45s; }
 
+  .repo-description {
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .repo-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .repo-actions {
+    text-align: right;
+  }
+
+  .repo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  @media (max-width: 1325px) {
+    #nav { padding: 20px 24px; }
+    .nav-links { /* display: none; */ gap: 20px; }
+    #logo-bl { display: block; }
+    .nav-logo-separator { display: none; }
+    #logo-hoz { display: none; }
+    .nav-logo-text { display: none; }
+    .nav-logo-desc { display: none; }
+    .projects-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  }
+
+  @media (max-width: 1024px) {
+    .projects { padding: 80px 32px; }
+    .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .founders { padding: 80px 32px; }
+    .founders-grid { grid-template-columns: 1fr; gap: 48px; }
+    .founders-accent { bottom: -18px; right: -18px; width: 90px; height: 90px; }
+    .founders-quote { padding-left: 18px; }
+    .founders-names { flex-direction: column; gap: 24px; }
+  }
+
   @media (max-width: 768px) {
     #nav { padding: 20px 24px; }
     .nav-links { display: none; }
     .hero-content, .skills, .projects, .founders, .newsletter, footer { padding-left: 24px; padding-right: 24px; }
     .hero-title { font-size: 3rem; }
     .skills-grid { grid-template-columns: 1fr; }
-    .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .founders-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; gap: 18px; }
+    .repo-card { min-height: auto; padding: 20px; }
+    .repo-footer { flex-direction: column; align-items: flex-start; }
+    .repo-actions { width: 100%; text-align: left; }
     .strip-cta { flex-direction: column; gap: 32px; text-align: center; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   }
 
-  @media (max-width: 1325px) {
-    #nav { padding: 20px 24px; }
-    .nav-links { /* display: none; */ gap: 20px;}
-    #logo-bl { display: block; }
-    .nav-logo-separator { display: none; }
-    #logo-hoz { display: none; }
-    .nav-logo-text { display: none; }
-    .nav-logo-desc { display: none; }
+  @media (max-width: 480px) {
+    .projects { padding: 60px 20px; }
+    .repo-card { padding: 18px; }
+    .repo-title { font-size: 1.05rem; }
+    .repo-description { -webkit-line-clamp: 5; }
+    .repo-footer { gap: 12px; }
   }
