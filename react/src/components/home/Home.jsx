@@ -104,8 +104,8 @@ function Hero() {
           Each piece, a statement of intent. Young craftsmanship with a contemporary vision.
         </p>
         <div className="hero-cta">
-          <a href="#products" className="btn-primary">Ver Colección</a>
-          <a href="#about" className="btn-ghost">Nuestra historia</a>
+          <a href="#projects" className="btn-primary">See projects</a>
+          <a href="#about-me" className="btn-ghost">About me</a>
         </div>
       </div>
     </section>
@@ -386,10 +386,10 @@ export default function Home({ onAdd }) {
     <>
       <Hero />
       {/* <Marquee /> */}
+      <Founders />
       <Skills />
       <Projects onAdd={onAdd} />
       {/* <StripCta /> */}
-      <Founders />
       {/* <Contact /> */}
     </>
   );

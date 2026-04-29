@@ -99,7 +99,7 @@ function FooterLinks() {
   return (
     <div className="footer-grid">
       <div>
-        <div className="footer-brand-name">Tu Marca</div>
+        <div className="footer-brand-name">JESUS GRAVALOS</div>
         <p className="footer-brand-desc">Diseño español con alma propia. Cada producto pensado para durar y para destacar.</p>
       </div>
       {cols.map((c) => (
@@ -117,7 +117,7 @@ function FooterLinks() {
 function Footer() {
   return (
     <footer>
-      <FooterLinks />
+      {/* <FooterLinks /> */}
       <div className="footer-bottom">
         <div className='footer-logo'>
           {/* <img src={logo_ver} alt="Tu Marca" /> */}
