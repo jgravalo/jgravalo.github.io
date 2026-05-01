@@ -127,9 +127,9 @@ function Marquee() {
 }
 
 const skills = [
-  { num: "01", name: "BACK END", icon: "🏺" },
-  { num: "02", name: "FRONT END", icon: "◆" },
-  { num: "03", name: "DEVOPS", icon: "◉" },
+  { num: "01", name: "BACK END", langs: ["c", "cpp", "python", "django", "nodejs", "java"] },
+  { num: "02", name: "FRONT END", langs: ["js", "ts", "react", "vue", "html", "css"] },
+  { num: "03", name: "DEVOPS", langs: ["git", "docker", "kubernetes", "postgresql", "mysql", "sqlite", "nginx"] },
 ];
 
 function Skills() {
@@ -147,13 +147,15 @@ function Skills() {
           <div key={c.num} className={`skill-card reveal${i > 0 ? ` reveal-delay-${i}` : ""}`}>
             <div className="img-placeholder">
               <span className="img-icon" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>
-                {c.icon}
+                {c.langs.map((lang) => (
+                  <img key={lang} className="img-skill" src={`https://skillicons.dev/icons?i=${lang}`} alt={lang} />
+                ))}
               </span>
             </div>
             <div className="skill-overlay">
               <div className="skill-num">{c.num}</div>
               <div className="skill-name">{c.name}</div>
-              <a href="#" className="skill-link">Descubrir</a>
+              <a href="#" className="skill-link">Discover</a>
             </div>
           </div>
         ))}

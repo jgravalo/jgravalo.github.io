@@ -107,6 +107,7 @@
   }
   .skill-card:hover .img-placeholder { transform: scale(1.04); }
   .img-icon { font-size: 3rem; opacity: 0.3; }
+  .img-skill { width: 70px; height: 70px; opacity: 0.8; margin: 0 4px; }
   .skill-overlay {
     position: absolute; inset: 0; padding: 32px;
     background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
