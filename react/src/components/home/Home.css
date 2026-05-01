@@ -107,7 +107,30 @@
   }
   .skill-card:hover .img-placeholder { transform: scale(1.04); }
   .img-icon { font-size: 3rem; opacity: 0.3; }
-  .img-skill { width: 70px; height: 70px; opacity: 0.8; margin: 0 4px; }
+  .skill-icons-grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    max-width: 180px;
+    width: 100%;
+  }
+  .img-skill {
+    width: 88px;
+    height: 88px;
+    opacity: 0.9;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  }
+  .img-skill:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+  }
   .skill-overlay {
     position: absolute; inset: 0; padding: 32px;
     background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
@@ -425,6 +448,15 @@
     .founders-accent { bottom: -18px; right: -18px; width: 90px; height: 90px; }
     .founders-quote { padding-left: 18px; }
     .founders-names { flex-direction: column; gap: 24px; }
+    .skill-icons-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px;
+      max-width: 120px;
+    }
+    .img-skill {
+      width: 62px;
+      height: 62px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -439,6 +471,15 @@
     .repo-actions { width: 100%; text-align: left; }
     .strip-cta { flex-direction: column; gap: 32px; text-align: center; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .skill-icons-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      max-width: 240px;
+    }
+    .img-skill {
+      width: 120px;
+      height: 120px;
+    }
   }
 
   @media (max-width: 480px) {

@@ -146,11 +146,11 @@ function Skills() {
         {skills.map((c, i) => (
           <div key={c.num} className={`skill-card reveal${i > 0 ? ` reveal-delay-${i}` : ""}`}>
             <div className="img-placeholder">
-              <span className="img-icon" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>
+              <div className="skill-icons-grid">
                 {c.langs.map((lang) => (
                   <img key={lang} className="img-skill" src={`https://skillicons.dev/icons?i=${lang}`} alt={lang} />
                 ))}
-              </span>
+              </div>
             </div>
             <div className="skill-overlay">
               <div className="skill-num">{c.num}</div>
