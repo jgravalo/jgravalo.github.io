@@ -128,8 +128,8 @@ function Marquee() {
 
 const skills = [
   { num: "01", name: "BACK END", langs: ["c", "cpp", "python", "django", "nodejs", "java"] },
-  { num: "02", name: "FRONT END", langs: ["js", "ts", "react", "vue", "html", "css"] },
-  { num: "03", name: "DEVOPS", langs: ["git", "docker", "kubernetes", "postgresql", "mysql", "sqlite", "nginx"] },
+  { num: "02", name: "FRONT END", langs: ["js", "ts", "react", "bootstrap", "html", "css"] },
+  { num: "03", name: "DEVOPS", langs: ["git", "docker", "postgresql", "mysql", "sqlite", "nginx"] },
 ];
 
 function Skills() {
