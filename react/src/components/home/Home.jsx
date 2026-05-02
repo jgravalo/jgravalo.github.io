@@ -98,10 +98,10 @@ function Hero() {
         <h1 className="hero-title">
           Development
           that <em>transforms</em><br />
-          your space
+          your ideas
         </h1>
         <p className="hero-desc">
-          Each piece, a statement of intent. Young craftsmanship with a contemporary vision.
+          Each project, a statement of intent. Young craftsmanship with a contemporary vision.
         </p>
         <div className="hero-cta">
           <a href="#projects" className="btn-primary">See projects</a>
@@ -316,12 +316,14 @@ function Founders() {
           <div className="section-label" style={{ marginBottom: 24 }}>About me</div>
           <blockquote className="founders-quote">
             {/* "Construimos esto porque creemos que el <em>diseño de calidad</em> no debería ser un lujo." */}
-            "I built this because I believe that <em>quality design</em> shouldn't be a luxury."
+            "I build code because I believe that <em>quality design</em> shouldn't be a luxury."
+            {/* "I craft <em>digital solutions</em> that transform ideas into scalable, efficient, and user-centric applications." */}
           </blockquote>
           <p className="founders-body">
             {/* Somos dos fundadores con una visión clara: traer al mercado productos excepcionales a un precio justo.
             Cada decisión, desde el diseño hasta la logística, la tomamos juntos con total transparencia y convicción. */}
-            I'm a developer with a clear vision: to bring exceptional products to market at a fair price. Every decision, from design to logistics, I make together with full transparency and conviction.
+            {/* I'm a developer with a clear vision: to bring exceptional products to market at a fair price. Every decision, from design to logistics, I make together with full transparency and conviction. */}
+            Passionate full-stack developer specializing in modern web technologies. I create robust applications with clean code, optimal performance, and exceptional user experiences. From concept to deployment, I deliver solutions that drive results.
           </p>
           <div className="founders-names">
             {[["Jesús Alberto Grávalos Olivier", "Software & AI Developer"]/* , ["Fundador 2", "Co-founder & Tecnología"] */].map(([name, role]) => (
